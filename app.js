@@ -13,3 +13,18 @@ let countDownDate = new Date("February 28, 2025 00:00:00").getTime();
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const audio = document.getElementById("myAudio");
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", function () {
+        if (audio.paused) {
+            audio.play();
+            btn.innerText = "Stop";
+        } else {
+            audio.pause();
+            audio.currentTime = 0; // آڈیو دوبارہ شروع ہونے کے لیے ری سیٹ کریں
+            btn.innerText = "Click For Pleasure";
+        }
+    });
+});

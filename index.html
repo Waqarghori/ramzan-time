@@ -9,6 +9,15 @@
 <body>
     <header>
         <h1>رمضان 2025</h1>
+
+        <div class="audio">
+            <audio id="myAudio">
+                <source src="audio/shane.mp3" type="audio/mp3">
+                آپ کا براؤزر آڈیو کو سپورٹ نہیں کرتا۔
+            </audio>
+            <button id="btn">Click For Pleasure</button>
+        </div>
+
         <p>سحری و افطاری کا مکمل ٹائم ٹیبل</p>
     </header>
     
@@ -76,19 +85,6 @@
         </div>
     </div>
     
-    <script>
-        function updateCountdown() {
-            const ramadanDate = new Date('March 2, 2025 00:00:00').getTime();
-            setInterval(() => {
-                const now = new Date().getTime();
-                const distance = ramadanDate - now;
-                document.getElementById('days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-                document.getElementById('hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                document.getElementById('minutes').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                document.getElementById('seconds').innerText = Math.floor((distance % (1000 * 60)) / 1000);
-            }, 1000);
-        }
-        updateCountdown();
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
