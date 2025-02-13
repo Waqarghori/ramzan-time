@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             btn.innerText = "Stop";
         } else {
             audio.pause();
-            audio.currentTime = 0; // آڈیو دوبارہ شروع ہونے کے لیے ری سیٹ کریں
+            audio.currentTime = 0;
             btn.innerText = "Click For Pleasure";
         }
     });
